@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { pool, relays } from '../../../utils/relay.js'
 import { Author, Event, RelayPool } from 'nostr-relaypool-fork'
-import { asyncCallWithTimeout } from '@/utils/helpers.js';
 
 
 export default function handler(req, res) {

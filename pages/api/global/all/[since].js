@@ -4,6 +4,6 @@ import { getEvents } from '../../../../utils/helpers.js';
 
 export default async function handler(req, res) {
   const { since } = req.query;
-  const events = await getEvents(undefined, undefined, parseInt(since), undefined, (events) => { res.status(200).json(events); });
+  await getEvents(undefined, undefined, parseInt(since), undefined, (events) => { res.status(200).json(events); }, 4000);
   
 }
