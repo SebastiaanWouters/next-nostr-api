@@ -7,7 +7,7 @@ export default function handler(req, res) {
   let unsub = pool.subscribe(
     [
       {
-        kinds: [0],
+        kinds: [1],
         authors: [
           pubkey,
         ],

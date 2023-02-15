@@ -5,9 +5,9 @@ const prisma = new PrismaClient()
 
 export default async function handler(req, res) {
   const { pubkey } = req.query;
-  const drafts = await prisma.draft.findMany({
+  const bookmarks = await prisma.bookmark.findMany({
     where: {
-      author: pubkey,
+      owner: pubkey,
     }});
-  res.status(200).json(drafts);
+  res.status(200).json(bookmarks);
 }
